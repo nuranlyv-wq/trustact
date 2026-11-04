@@ -10,8 +10,10 @@
 <link rel="canonical" href="https://trustactltd.com/ru/">
 <link rel="alternate" hreflang="en" href="https://trustactltd.com/">
 <link rel="alternate" hreflang="ru" href="https://trustactltd.com/ru/">
+<link rel="alternate" hreflang="az" href="https://trustactltd.com/az/">
 <link rel="alternate" hreflang="x-default" href="https://trustactltd.com/">
 <meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="az_AZ">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Trustact Ltd">
 <meta property="og:url" content="https://trustactltd.com/ru/">
@@ -452,6 +454,11 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
   .spec div { grid-template-columns: 110px 1fr; gap: 12px; }
   .tick--x:nth-of-type(even) { display: none; }
 }
+@media (max-width: 420px) {
+  .mark { font-size: 22px; }
+  .lang a { padding: 8px 4px; }
+  .top .btn--sm { padding: 0 12px; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
@@ -470,6 +477,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
     <nav class="lang" aria-label="Язык">
       <a href="/" hreflang="en" lang="en">EN</a>
       <a href="/ru/" hreflang="ru" lang="ru" aria-current="page">RU</a>
+      <a href="/az/" hreflang="az" lang="az">AZ</a>
     </nav>
     <a class="btn btn--sm" href="#contact">Контакты</a>
   </div>
