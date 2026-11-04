@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://trustactltd.com/</loc>
     <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trustactltd.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://trustactltd.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trustactltd.com/"/>
     <image:image><image:loc>https://trustactltd.com/img/port-2400.webp</image:loc></image:image>
     <image:image><image:loc>https://trustactltd.com/img/excavator.webp</image:loc></image:image>
     <image:image><image:loc>https://trustactltd.com/img/bearing.webp</image:loc></image:image>
     <image:image><image:loc>https://trustactltd.com/img/truck.webp</image:loc></image:image>
     <image:image><image:loc>https://trustactltd.com/img/tires.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://trustactltd.com/ru/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://trustactltd.com/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://trustactltd.com/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://trustactltd.com/"/>
   </url>
 </urlset>

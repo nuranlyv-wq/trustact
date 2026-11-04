@@ -8,6 +8,10 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0A1A33">
 <link rel="canonical" href="https://trustactltd.com/">
+<link rel="alternate" hreflang="en" href="https://trustactltd.com/">
+<link rel="alternate" hreflang="ru" href="https://trustactltd.com/ru/">
+<link rel="alternate" hreflang="x-default" href="https://trustactltd.com/">
+<meta property="og:locale:alternate" content="ru_RU">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Trustact Ltd">
 <meta property="og:url" content="https://trustactltd.com/">
@@ -22,10 +26,10 @@
 <meta name="twitter:title" content="China Sourcing & Supply Coordination | Trustact Ltd">
 <meta name="twitter:description" content="UK-registered company coordinating supply from China — from manufacturer search and quotations to quality inspection and export documents.">
 <meta name="twitter:image" content="https://trustactltd.com/img/og.jpg">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preload" as="image" href="img/port-1280.webp" imagesrcset="img/port-1280.webp 1280w, img/port-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="image" href="/img/port-1280.webp" imagesrcset="/img/port-1280.webp 1280w, /img/port-2400.webp 2400w" imagesizes="100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -227,6 +231,10 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
 .btn--ghost:hover { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn--sm { height: 38px; padding: 0 14px; font-size: 14px; }
 .btn .arr { font-family: var(--mono); }
+.ico { flex: none; width: 18px; height: 18px; fill: currentColor; }
+.lang { display: flex; font: 500 12px/1 var(--mono); letter-spacing: .06em; }
+.lang a { padding: 8px 6px; color: var(--ink-3); }
+.lang a:hover, .lang a[aria-current="page"] { color: var(--ink); }
 
 /* Hero */
 .hero { padding: 56px 0 0; }
@@ -384,7 +392,11 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
 .contact-list dt { font: 400 12px/1.9 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--on-navy-2); }
 .contact-list dd { font-size: 17px; font-weight: 500; color: #fff; overflow-wrap: anywhere; }
 .contact-list a:hover { color: #9cc4f2; }
-.contact .cta { margin-top: 28px; }
+.contact-list .im { display: inline-flex; align-items: center; gap: 10px; }
+.wechat-note { margin-top: 14px; font: 400 13px/1.5 var(--mono); color: #9cc4f2; }
+.contact .cta { display: grid; grid-template-columns: 1fr 1fr; max-width: 440px; margin-top: 28px; }
+.contact .cta .btn { justify-content: center; }
+.contact .cta .btn:first-child { grid-column: 1 / -1; }
 .contact .btn { background: #fff; color: var(--navy); border-color: #fff; }
 .contact .btn:hover { background: #d9e6f6; border-color: #d9e6f6; }
 .contact .btn--ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.4); }
@@ -403,7 +415,8 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
 }
 @media (max-width: 1000px) {
   .nav { display: none; }
-  .top .wrap { justify-content: space-between; }
+  .top .wrap { gap: 12px; }
+  .lang { margin-left: auto; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; align-items: start; }
   .sec-head { grid-template-columns: 1fr; gap: 14px; margin-bottom: 32px; }
   .rows li { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 24px; }
@@ -450,6 +463,10 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
       <a href="#process">Process</a>
       <a href="#markets">Markets</a>
     </nav>
+    <nav class="lang" aria-label="Language">
+      <a href="/" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="/ru/" hreflang="ru" lang="ru">RU</a>
+    </nav>
     <a class="btn btn--sm" href="#contact">Contact</a>
   </div>
 </header>
@@ -480,7 +497,7 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
   </div>
 
   <figure class="hero-photo">
-    <img src="img/port-1280.webp" srcset="img/port-1280.webp 1280w, img/port-2400.webp 2400w" sizes="100vw" width="2400" height="1000" alt="Container ship and cranes at a port terminal" fetchpriority="high">
+    <img src="/img/port-1280.webp" srcset="/img/port-1280.webp 1280w, /img/port-2400.webp 2400w" sizes="100vw" width="2400" height="1000" alt="Container ship and cranes at a port terminal" fetchpriority="high">
   </figure>
 </section>
 
@@ -523,10 +540,10 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
     <div class="sec-head"><h2><span class="idx" aria-hidden="true">03</span> Product categories</h2><p class="sec-intro">Product groups across industrial, transport and technical supply.</p></div>
     <div>
       <ul class="cols cols--products">
-        <li><span class="code">P-01</span><img src="img/excavator.webp" width="800" height="600" loading="lazy" decoding="async" alt="Yellow excavator at a construction site"><h3>Construction machinery</h3><p>Spare parts for excavators, loaders and road construction equipment.</p></li>
-        <li><span class="code">P-02</span><img src="img/bearing.webp" width="800" height="600" loading="lazy" decoding="async" alt="Bearing and chain, close-up"><h3>Mechanical and hydraulic parts</h3><p>Bearings, transmission, hydraulic and mechanical components.</p></li>
-        <li><span class="code">P-03</span><img src="img/truck.webp" width="800" height="600" loading="lazy" decoding="async" alt="Truck on a highway"><h3>Commercial vehicles</h3><p>Components for trucks and special-purpose vehicles.</p></li>
-        <li><span class="code">P-04</span><img src="img/tires.webp" width="800" height="600" loading="lazy" decoding="async" alt="Stacked industrial tyres"><h3>Tyres and industrial supplies</h3><p>Tyres, industrial components and related product groups.</p></li>
+        <li><span class="code">P-01</span><img src="/img/excavator.webp" width="800" height="600" loading="lazy" decoding="async" alt="Yellow excavator at a construction site"><h3>Construction machinery</h3><p>Spare parts for excavators, loaders and road construction equipment.</p></li>
+        <li><span class="code">P-02</span><img src="/img/bearing.webp" width="800" height="600" loading="lazy" decoding="async" alt="Bearing and chain, close-up"><h3>Mechanical and hydraulic parts</h3><p>Bearings, transmission, hydraulic and mechanical components.</p></li>
+        <li><span class="code">P-03</span><img src="/img/truck.webp" width="800" height="600" loading="lazy" decoding="async" alt="Truck on a highway"><h3>Commercial vehicles</h3><p>Components for trucks and special-purpose vehicles.</p></li>
+        <li><span class="code">P-04</span><img src="/img/tires.webp" width="800" height="600" loading="lazy" decoding="async" alt="Stacked industrial tyres"><h3>Tyres and industrial supplies</h3><p>Tyres, industrial components and related product groups.</p></li>
       </ul>
       <p class="note">Product availability, technical compatibility and pricing are confirmed separately for each enquiry.</p>
     </div>
@@ -653,12 +670,16 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
       <p class="req"><b>Please include:</b> product, model or OEM code, technical specifications, quantity and delivery location.</p>
       <div class="cta">
         <a class="btn" href="mailto:trustact.business@gmail.com?subject=Enquiry&amp;body=Hello%2C%0A%0AProduct%3A%0AModel%20%2F%20OEM%20code%3A%0ATechnical%20specifications%3A%0AQuantity%3A%0ADelivery%20location%3A%0A">Send an enquiry <span class="arr">→</span></a>
-        <a class="btn btn--ghost" href="tel:+8615317336362">Call us</a>
+        <a class="btn btn--ghost" href="https://wa.me/8615317336362?text=Hello%21%20I%20have%20an%20enquiry%20for%20Trustact%20Ltd." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>WhatsApp</a>
+        <a class="btn btn--ghost" href="weixin://" data-wechat="+8615317336362"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>WeChat</a>
       </div>
+      <p class="wechat-note" id="wechat-note" role="status" hidden data-copied="Number copied." data-hint="Search +86 153 1733 6362 in WeChat to add us."></p>
       </div>
       <dl class="contact-list">
         <div><dt>Email</dt><dd><a href="mailto:trustact.business@gmail.com">trustact.business@gmail.com</a></dd></div>
         <div><dt>Phone</dt><dd><a href="tel:+8615317336362">+86 153 1733 6362</a></dd></div>
+        <div><dt>WhatsApp</dt><dd><a class="im" href="https://wa.me/8615317336362?text=Hello%21%20I%20have%20an%20enquiry%20for%20Trustact%20Ltd." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>+86 153 1733 6362</a></dd></div>
+        <div><dt>WeChat</dt><dd><a class="im" href="weixin://" data-wechat="+8615317336362"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-6.656-6.088V8.89c-.135-.01-.27-.027-.407-.03zm-2.53 3.274c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.844 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>+86 153 1733 6362</a></dd></div>
         <div><dt>Address</dt><dd>71–75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</dd></div>
         <div><dt>Company</dt><dd>Company No. 14673164 · Incorporated 18 February 2023</dd></div>
       </dl>
@@ -675,6 +696,27 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-
     <span>© 2026 Trustact Ltd · Registered in England and Wales · Company No. 14673164</span>
   </div>
 </footer>
+
+<script>
+document.querySelectorAll('[data-wechat]').forEach(function (el) {
+  el.addEventListener('click', function (e) {
+    e.preventDefault();
+    var note = document.getElementById('wechat-note');
+    var show = function (copied) {
+      note.textContent = (copied ? note.dataset.copied + ' ' : '') + note.dataset.hint;
+      note.hidden = false;
+    };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(el.dataset.wechat).then(function () { show(true); }, function () { show(false); });
+    } else {
+      show(false);
+    }
+    if (/Android|iPhone|iPad/i.test(navigator.userAgent)) {
+      setTimeout(function () { location.href = 'weixin://'; }, 400);
+    }
+  });
+});
+</script>
 
 </body>
 </html>
